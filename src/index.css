@@ -1,0 +1,42 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.hiddenScrollbar::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+
+.hiddenScrollbar {
+  scrollbar-width: none;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+}
+
+.popup-open {
+  animation: fadeIn 0.3s forwards;
+}
+
+.popup-close {
+  animation: fadeOut 0.3s forwards;
+}
