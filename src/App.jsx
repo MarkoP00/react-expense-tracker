@@ -78,6 +78,8 @@ const App = () => {
       );
 
       if (response) {
+        callToast("success", "Transaction added!");
+
         // doing fetch again because of transaction ID
         getAllTransactions();
       }

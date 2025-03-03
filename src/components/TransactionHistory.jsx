@@ -10,7 +10,9 @@ const TransactionHistory = ({
       <div className="border-b-2 border-gray-300 pb-2 mb-4">
         <h3 className="text-xl font-semibold text-gray-700">History</h3>
       </div>
-      {!transactions[selectedMonth] && <p className="text-gray-600">No transactions added</p>}
+      {!transactions[selectedMonth] && (
+        <p className="text-gray-600">No transactions added</p>
+      )}
       <ul>
         {transactions[selectedMonth]?.map(({ id, text, amount }) => (
           <li
@@ -26,7 +28,7 @@ const TransactionHistory = ({
               className={`font-bold ${
                 amount < 0 ? "text-red-500" : "text-green-500"
               }`}>
-              {amount}€
+              {amount.toFixed(2)}€
             </span>
           </li>
         ))}

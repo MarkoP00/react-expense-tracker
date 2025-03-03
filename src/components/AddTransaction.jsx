@@ -14,7 +14,6 @@ const AddTransaction = ({ onAddTransaction }) => {
       onAddTransaction(text, +amount);
       setText("");
       setAmount(0);
-      callToast("success", "Transaction added!");
     } else {
       callToast("warning", "Please, check all fields!");
     }
